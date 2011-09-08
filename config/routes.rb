@@ -1,6 +1,16 @@
 Crowdguideme::Application.routes.draw do
-  get "home/index"
+  get "sessions/new"
 
+  get "home/index"
+  
+  resource :user
+  resource :session do
+    collection do
+      get 'callback'
+    end
+  end
+  
+  match 'users/friends' => 'users#friends'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,7 +60,7 @@ Crowdguideme::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-root :to => "home#index"
+root :to => "sessions#new"
 
   # See how all your routes lay out with "rake routes"
 

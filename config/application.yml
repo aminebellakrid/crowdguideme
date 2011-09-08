@@ -1,0 +1,12 @@
+defaults: &defaults
+  app_id: 'BFLUFEV5WX0OGOLR11QNB0D240SW0ASWW0BLWEHACAKPUVO1'
+  app_secret: '5X50BZWRZ23SQCZJZS2YWA5M11KU4QV30YLBHMZXOV1H3IKQ'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

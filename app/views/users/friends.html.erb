@@ -1,0 +1,19 @@
+
+	
+<% current_user.friends.each do |friend|%>
+  <div class ="friend">
+  	<div class ="photo">
+  	
+	    <%=  image_tag(friend.photo) if friend.photo %>
+	<div class="info">
+		<div class="name">
+		<%=	"#{friend.first_name} #{friend.last_name}"%>
+		</div>
+		<div class="city">
+			<%= friend.home_city %>
+		</div>
+	</div>
+  	</div>
+  </div>
+<% end %>
+    
